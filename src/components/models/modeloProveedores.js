@@ -5,31 +5,26 @@ const {
 require('./categoriasProductos')
 const ProveedoresSchema = new Schema({
 
-    nombre: {
+    nombreOrazonSocial: {
         type: String,
         min: 6,
         max: 20
 
 
     },
-    razonSocial: {
+    cedulaIdentidad: {
         type: String,
-        mix: 10,
-        require
+        required: true
     },
-    cedulaIdentidad:{
-        type:String,
-        required:true
-    },
-    DomicilioEmpresa:{
-type: String,
-required:true
+    DomicilioEmpresa: {
+        type: String,
+        required: true
 
 
     },
-    telefono:{
+    telefono: {
         type: Number,
-        required:true
+        required: true
 
 
 
@@ -52,12 +47,12 @@ required:true
     },
     role: {
         type: String,
-        default:'proveedor'
+        default: 'proveedor'
     },
     idCategorias: {
-        type:Schema.ObjectId,
-        ref:'categorias',
-        required:true
+        type: Schema.ObjectId,
+        ref: 'categorias',
+        // required: true
     }
 
 
