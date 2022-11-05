@@ -1,6 +1,6 @@
 const router =require('express').Router()
 
-const {iniciarSesion}=require("../controllers/authCliente")
+const {iniciarSesion}=require("../controllers/authProveedor")
 
 
 

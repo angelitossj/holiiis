@@ -96,6 +96,7 @@ CtrlCProveedores.postProveedores = async (req, res) => {
             nombreOrazonSocial,
             cedulaIdentidad,
             DomicilioEmpresa,
+            usuario,
             telefono,
             email,
             password
@@ -108,6 +109,7 @@ CtrlCProveedores.postProveedores = async (req, res) => {
             nombreOrazonSocial,
             cedulaIdentidad,
             DomicilioEmpresa,
+            usuario,
             telefono,
             email,
             password:newPassword
@@ -150,11 +152,12 @@ CtrlCProveedores.putProveedores = async (req, res) => {
             cedulaIdentidad,
             DomicilioEmpresa,
             telefono,
+            usuario,
             email,
             password
         } = req.body
         const newPassword = bcrypt.hashSync(password, 10)
-        if (!id || !nombreOrazonSocial ||!cedulaIdentidad || !DomicilioEmpresa ||!telefono || !email || !password) {
+        if (!id || !nombreOrazonSocial ||!cedulaIdentidad || !DomicilioEmpresa ||!telefono || !email ||!usuario || !password) {
             return res.status(400).json({
                 message: "no viene id o informacion",
 
@@ -166,6 +169,7 @@ CtrlCProveedores.putProveedores = async (req, res) => {
             cedulaIdentidad,
             DomicilioEmpresa,
             telefono,
+            usuario,
             email,
             password:newPassword})
 

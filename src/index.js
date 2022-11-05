@@ -26,7 +26,7 @@ app.use(express.json())
 // app.use(require("./components/routes/authRutas"))
 app.use(require('./components/routes/rutasClientes'))
 app.use(require('./components/routes/rutasProveedores'))
-
+app.use(require('./components/routes/authProveedores'))
 
 
 

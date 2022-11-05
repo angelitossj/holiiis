@@ -12,6 +12,12 @@ const ProveedoresSchema = new Schema({
 
 
     },
+    usuario:{
+        type: String,
+        required:true
+        
+    },
+
     cedulaIdentidad: {
         type: String,
         required: true

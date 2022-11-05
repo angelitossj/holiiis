@@ -8,7 +8,7 @@ const schemaCliente = new Schema({
         type: String,
         required:true
     },
-    nombreUsuario: {
+    usuario: {
         type: String,
         required:true
     },
