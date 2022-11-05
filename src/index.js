@@ -21,9 +21,10 @@ app.use(morgan("combined"))
 app.use(express.json())
 
 // rutas
-app.use(require("./components/routes/rutasUsuarios"))
-app.use(require("./components/routes/rutasTareas"))
-app.use(require("./components/routes/authRutas"))
+// app.use(require("./components/routes/rutasUsuarios"))
+// app.use(require("./components/routes/rutasTareas"))
+// app.use(require("./components/routes/authRutas"))
+app.use(require('./components/routes/rutasClientes'))
 
 
 
